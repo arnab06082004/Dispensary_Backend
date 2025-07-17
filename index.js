@@ -9,8 +9,10 @@ app.use(express.json());
 app.use(cookieParser())
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://dispensary-frontend-nhyuelgvm-arnab06082004s-projects.vercel.app'
+  'https://dispensary-management-system.vercel.app', 
+  
 ];
+
 
 app.use(cors({
   origin: (origin, callback) => {
