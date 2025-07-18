@@ -9,14 +9,14 @@ router.post("/send-otp", UserController.sendOtp)
 router.post("/verify-otp", UserController.verifyOtp)
 router.post('/reset-password',UserController.resetPassword)
 
-router.put("/update-student/:id",authentication.adminFacultyAuth,UserController.updateStudentById)
-router.get("/get-student-by-roll/:roll",authentication.adminFacultyAuth,UserController.getStudentByRoll)
-router.post("/registerStudentByStaff",authentication.adminFacultyAuth,UserController.registerStudentByStaff)
+router.put("/update-student/:id",UserController.updateStudentById)
+router.get("/get-student-by-roll/:roll",UserController.getStudentByRoll)
+router.post("/registerStudentByStaff",UserController.registerStudentByStaff)
 
-router.post("/add-staff",authentication.adminFacultyAuth,UserController.addStaffByAdmin)
+router.post("/add-staff",UserController.addStaffByAdmin)
 router.get("/get-staff",UserController.getAllStaff)
-router.put("/update-staff/:id",authentication.adminFacultyAuth,UserController.updateStaffById)
-router.delete("/delete-staff/:id",authentication.adminFacultyAuth, UserController.deleteStaff)
+router.put("/update-staff/:id",UserController.updateStaffById)
+router.delete("/delete-staff/:id", UserController.deleteStaff)
 
 router.post("/logout",UserController.logout)
 
